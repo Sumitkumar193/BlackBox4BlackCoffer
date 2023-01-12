@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\importCsvController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/csvImport', [importCsvController::class, 'importCsv']);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
