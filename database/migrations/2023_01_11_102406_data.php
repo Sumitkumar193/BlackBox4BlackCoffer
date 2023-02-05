@@ -33,7 +33,7 @@ return new class extends Migration
             $table->integer('start_year')->nullable();
             $table->integer('end_year');
             $table->timestamp('added');
-            $table->timestamp('published');
+            $table->timestamp('published')->nullable();
         });
     }
 
